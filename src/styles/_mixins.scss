@@ -1,0 +1,14 @@
+@mixin default-font {
+    font-family: $default-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+@mixin default-border {
+    border: $border;
+    border-radius: 4px;
+    &:hover {
+        border-color: $border-color-hover;
+    }
+}

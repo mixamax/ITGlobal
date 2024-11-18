@@ -1,0 +1,29 @@
+.menu {
+    width: 280px;
+    height: 100%;
+}
+
+.menu__filter {
+    width: 100%;
+    height: 65px;
+    padding: 16px;
+    display: flex;
+    column-gap: 8px;
+}
+
+.menu__input-field {
+    padding: 6px 8px;
+    @include default-border;
+    display: flex;
+    background-color: $input-bg-color;
+}
+
+.menu__input {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    &::placeholder {
+        color: $text-mask-color;
+    }
+}

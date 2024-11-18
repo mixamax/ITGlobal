@@ -1,0 +1,23 @@
+.sidebar__btn {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    // width: 56px;
+    // height: 56px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.sidebar__btn_lg {
+    width: 56px;
+    height: 56px;
+}
+
+.sidebar__btn_sm {
+    width: 32px;
+    height: 32px;
+}
