@@ -1,6 +1,8 @@
 import { Sidebar } from "../Sidebar/Sidebar";
 import { useResize } from "../../hooks/useResize";
 import { useEffect, useState } from "react";
+import { SidebarBtn } from "../SidebarBtn/SidebarBtn";
+import { Header } from "../Header/Header";
 
 export function Layout() {
     const { isMenuVisibleInit, isMenuPositionAbsolute, isShortHeader } =
@@ -15,21 +17,27 @@ export function Layout() {
         setIsMenuVisible((s) => !s);
     };
 
-    // console.log(isMenuVisibleInit, isMenuPositionAbsolute);
     return (
-        <div
-            className={`${
-                isMenuVisible ? "layout" : "layout layout_hide-menu"
-            }`}
-        >
-            <header></header>
-            <aside>
+        <div className="layout">
+            <Header />
+            {/* <header>
+                {isShortHeader && (
+                    <SidebarBtn
+                        size="sm"
+                        onChangeMenuVisibility={handleChangeMenuVisibility}
+                    />
+                )}
+            </header> */}
+            <div className="wrapper">
                 <Sidebar
+                    isShortHeader={isShortHeader}
+                    isMenuVisible={isMenuVisible}
+                    isMenuPositionAbsolute={isMenuPositionAbsolute}
                     onChangeMenuVisibility={handleChangeMenuVisibility}
-                    // isMenuPositionAbsolute={isMenuPositionAbsolute}
                 />
-            </aside>
-            <main></main>
+
+                <main></main>
+            </div>
         </div>
     );
 }

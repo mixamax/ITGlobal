@@ -1,6 +1,21 @@
 .menu {
     width: 280px;
     height: 100%;
+    background-color: $default-bg-color;
+    transition: margin-left 0.3s ease-in-out;
+
+    &_hidden {
+        margin-left: -280px;
+    }
+}
+
+.menu_absolute {
+    position: absolute;
+    left: 56px;
+}
+
+.menu_left0 {
+    left: 0;
 }
 
 .menu__filter {
@@ -8,22 +23,6 @@
     height: 65px;
     padding: 16px;
     display: flex;
+    justify-content: space-between;
     column-gap: 8px;
-}
-
-.menu__input-field {
-    padding: 6px 8px;
-    @include default-border;
-    display: flex;
-    background-color: $input-bg-color;
-}
-
-.menu__input {
-    background: none;
-    border: none;
-    outline: none;
-    padding: 0;
-    &::placeholder {
-        color: $text-mask-color;
-    }
 }

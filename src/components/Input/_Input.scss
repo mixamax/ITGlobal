@@ -1,0 +1,18 @@
+.input-wrapper {
+    width: 100%;
+    padding: 6px 8px;
+    @include default-border;
+    display: flex;
+    background-color: $input-bg-color;
+}
+
+.input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    &::placeholder {
+        color: $text-mask-color;
+    }
+}

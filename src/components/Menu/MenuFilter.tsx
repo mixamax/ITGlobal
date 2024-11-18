@@ -1,18 +1,15 @@
 import imagePath from "../../assets/images/filter.svg";
 import imageNoPinPath from "../../assets/images/no-pin.svg";
 import { Button } from "../Button/Button";
+import Input from "../Input/Input";
 export function MenuFilter() {
     return (
         <div className="menu__filter">
-            <div className="menu__input-field">
-                <input className="menu__input" placeholder="Поиск по меню" />
-                <img
-                    className="menu__input-img"
-                    src={imagePath}
-                    alt="иконка фильтра"
-                    width={16}
-                ></img>
-            </div>
+            <Input
+                imagePath={imagePath}
+                placeholder="Поиск по меню"
+                alt="иконка фильтра"
+            />
             <Button
                 type="largeIcon"
                 imgSrc={imageNoPinPath}

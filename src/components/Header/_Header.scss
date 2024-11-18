@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__info {
+    display: flex;
+    column-gap: 8px;
+    width: 532px;
+}
+
+.user-info {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.user-info__name {
+    display: block;
+    text-wrap: nowrap;
+}
