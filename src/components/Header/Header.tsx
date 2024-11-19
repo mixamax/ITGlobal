@@ -10,9 +10,10 @@ const name = "Максим Галактионов";
 
 type Props = {
     onChangeMenuVisibility: () => void;
+    isMenuVisible: boolean;
 };
 
-export function Header({ onChangeMenuVisibility }: Props) {
+export function Header({ onChangeMenuVisibility, isMenuVisible }: Props) {
     return (
         <header className="header">
             <img
@@ -26,6 +27,7 @@ export function Header({ onChangeMenuVisibility }: Props) {
                 <SidebarBtn
                     size="sm"
                     onChangeMenuVisibility={onChangeMenuVisibility}
+                    isMenuVisible={isMenuVisible}
                 />
             </div>
 

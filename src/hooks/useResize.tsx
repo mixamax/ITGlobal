@@ -4,8 +4,6 @@ export const useResize = () => {
     const [width, setWidth] = useState(window.innerWidth);
 
     const isMenuVisibleInit = width > 991;
-    const isMenuPositionAbsolute = width < 991;
-    const isShortHeader = width < 768;
 
     useEffect(() => {
         const handleResize = () => {
@@ -19,5 +17,5 @@ export const useResize = () => {
         };
     }, []);
 
-    return { isMenuVisibleInit, isMenuPositionAbsolute, isShortHeader };
+    return { isMenuVisibleInit };
 };

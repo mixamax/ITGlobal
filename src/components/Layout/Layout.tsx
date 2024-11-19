@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 import { Header } from "../Header/Header";
 
 export function Layout() {
-    const { isMenuVisibleInit, isMenuPositionAbsolute, isShortHeader } =
-        useResize();
+    const { isMenuVisibleInit } = useResize();
+
     const [isMenuVisible, setIsMenuVisible] = useState(() => isMenuVisibleInit);
     console.log(isMenuVisible);
+
     useEffect(() => {
         setIsMenuVisible(isMenuVisibleInit);
     }, [isMenuVisibleInit]);
@@ -18,12 +19,13 @@ export function Layout() {
 
     return (
         <div className="layout">
-            <Header onChangeMenuVisibility={handleChangeMenuVisibility} />
-            <div className="wrapper">
+            <Header
+                onChangeMenuVisibility={handleChangeMenuVisibility}
+                isMenuVisible={isMenuVisible}
+            />
+            <div className="layout__aside-and-main-wrapper">
                 <Sidebar
-                    isShortHeader={isShortHeader}
                     isMenuVisible={isMenuVisible}
-                    isMenuPositionAbsolute={isMenuPositionAbsolute}
                     onChangeMenuVisibility={handleChangeMenuVisibility}
                 />
 

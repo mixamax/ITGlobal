@@ -3,5 +3,6 @@
     z-index: 10;
     width: 56px;
     height: 100%;
-    background-color: beige;
+    border-right: $border;
+    background-color: $default-bg-color;
 }

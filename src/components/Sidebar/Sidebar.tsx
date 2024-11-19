@@ -3,27 +3,20 @@ import { Navigator } from "../Navigator/Navigator";
 
 type Props = {
     isMenuVisible: boolean;
-    isMenuPositionAbsolute: boolean;
-    isShortHeader: boolean;
     onChangeMenuVisibility: () => void;
 };
 
-export function Sidebar({
-    isMenuVisible,
-    isMenuPositionAbsolute,
-    isShortHeader,
-    onChangeMenuVisibility,
-}: Props) {
+export function Sidebar({ isMenuVisible, onChangeMenuVisibility }: Props) {
     return (
         <aside className="sidebar">
-            {!isShortHeader && (
-                <Navigator onChangeMenuVisibility={onChangeMenuVisibility} />
-            )}
-            <Menu
-                isShortHeader={isShortHeader}
-                isMenuVisible={isMenuVisible}
-                isMenuPositionAbsolute={isMenuPositionAbsolute}
-            />
+            <div className="sidebar__navigator-wrapper">
+                <Navigator
+                    onChangeMenuVisibility={onChangeMenuVisibility}
+                    isMenuVisible={isMenuVisible}
+                />
+            </div>
+
+            <Menu isMenuVisible={isMenuVisible} />
         </aside>
     );
 }
