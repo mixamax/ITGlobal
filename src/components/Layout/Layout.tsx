@@ -1,7 +1,6 @@
 import { Sidebar } from "../Sidebar/Sidebar";
 import { useResize } from "../../hooks/useResize";
 import { useEffect, useState } from "react";
-import { SidebarBtn } from "../SidebarBtn/SidebarBtn";
 import { Header } from "../Header/Header";
 
 export function Layout() {
@@ -19,15 +18,7 @@ export function Layout() {
 
     return (
         <div className="layout">
-            <Header />
-            {/* <header>
-                {isShortHeader && (
-                    <SidebarBtn
-                        size="sm"
-                        onChangeMenuVisibility={handleChangeMenuVisibility}
-                    />
-                )}
-            </header> */}
+            <Header onChangeMenuVisibility={handleChangeMenuVisibility} />
             <div className="wrapper">
                 <Sidebar
                     isShortHeader={isShortHeader}

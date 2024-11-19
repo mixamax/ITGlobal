@@ -13,7 +13,7 @@ const smD =
 export function SidebarBtn({ size, onChangeMenuVisibility }: Props) {
     const [isActive, setIsActive] = useState(false);
 
-    let width = "24";
+    let width = size === "lg" ? "24" : "20";
     let fill = isActive ? "#005999" : "#2E3238";
     let d = size === "lg" ? lgD : smD;
 

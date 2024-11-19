@@ -1,14 +1,38 @@
+%tablet-view {
+    @media screen and (max-width: $bp-tablet-sm) {
+        display: none;
+    }
+}
+
 .header {
     display: flex;
     padding: 0 16px;
     align-items: center;
     justify-content: space-between;
-}
 
-.header__info {
-    display: flex;
-    column-gap: 8px;
-    width: 532px;
+    &__logo {
+        @extend %tablet-view;
+    }
+
+    &__btn-wrapper {
+        @media screen and (min-width: $bp-tablet-sm) {
+            display: none;
+        }
+    }
+
+    &__info {
+        display: flex;
+        column-gap: 8px;
+        width: 532px;
+        @media screen and (max-width: $bp-tablet-sm) {
+            width: auto;
+            column-gap: 16px;
+        }
+    }
+
+    &__info_input {
+        @extend %tablet-view;
+    }
 }
 
 .user-info {
@@ -16,9 +40,10 @@
     column-gap: 8px;
     align-items: center;
     margin-left: 8px;
-}
 
-.user-info__name {
-    display: block;
-    text-wrap: nowrap;
+    &__name {
+        text-wrap: nowrap;
+
+        @extend %tablet-view;
+    }
 }

@@ -4,18 +4,37 @@ import Input from "../Input/Input";
 import avatarPath from "../../assets/images/avatar.png";
 import settingsIconPath from "../../assets/images/settings.svg";
 import { Button } from "../Button/Button";
+import { SidebarBtn } from "../SidebarBtn/SidebarBtn";
 
 const name = "Максим Галактионов";
 
-export function Header() {
+type Props = {
+    onChangeMenuVisibility: () => void;
+};
+
+export function Header({ onChangeMenuVisibility }: Props) {
     return (
         <header className="header">
-            <img width={174} height={24} src={logoPath} alt="логотип" />
+            <img
+                className="header__logo"
+                width={174}
+                height={24}
+                src={logoPath}
+                alt="логотип"
+            />
+            <div className="header__btn-wrapper">
+                <SidebarBtn
+                    size="sm"
+                    onChangeMenuVisibility={onChangeMenuVisibility}
+                />
+            </div>
+
             <div className="header__info">
                 <Input
                     imagePath={searchIconPath}
                     placeholder="Поиск"
                     alt="иконка поиска"
+                    specClass="header__info_input"
                 />
                 <div className="user-info">
                     <img width={32} height={32} src={avatarPath}></img>
