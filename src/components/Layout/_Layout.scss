@@ -1,9 +1,10 @@
 .layout {
-    height: 100vh;
+    // height: 100vh;
     max-width: $max-width;
     margin: 0 auto;
     display: grid;
     grid-template-rows: 48px 1fr;
+    border: $border;
 
     &__aside-and-main-wrapper {
         display: flex;
@@ -11,10 +12,14 @@
     }
 
     & main {
+        height: calc(100vh - 48px);
         display: flex;
         overflow-x: hidden;
         flex-direction: column;
         width: 100%;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     @media screen and (max-width: $bp-tablet-sm) {

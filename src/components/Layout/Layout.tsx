@@ -9,6 +9,8 @@ export function Layout() {
     const { isMenuVisibleInit } = useResize();
     const mainRef = useRef<HTMLElement>(null);
     const subheaderRef = useRef<HTMLDivElement>(null);
+    // const layoutRef = useRef<HTMLDivElement>(null);
+
     const [isMenuVisible, setIsMenuVisible] = useState(() => isMenuVisibleInit);
 
     const handleChangeMenuVisibility = () => {
@@ -38,6 +40,17 @@ export function Layout() {
             }
         };
     }, []);
+
+    // useLayoutEffect(() => {
+    //     const element = mainRef.current;
+    //     const layout = layoutRef.current;
+    //     if (element && layout) {
+    //         const rect = element.getBoundingClientRect();
+    //         const mainHeight = rect.height;
+
+    //         layout.style.height = `${mainHeight}px`;
+    //     }
+    // }, []);
 
     return (
         <div className="layout">

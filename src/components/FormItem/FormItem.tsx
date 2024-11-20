@@ -1,4 +1,4 @@
-import searchIcon from "../../assets/images/search.svg";
+import searchIcon from "../../assets/images/search-black.svg";
 import calendarIcon from "../../assets/images/calendar.svg";
 import closeIcon from "../../assets/images/close.svg";
 import plusIcon from "../../assets/images/plus.svg";

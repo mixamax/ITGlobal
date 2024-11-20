@@ -20,6 +20,25 @@ $menu-width: 280px;
         margin-left: -$menu-width;
     }
 
+    &__menu-list {
+        display: flex;
+        flex-direction: column;
+        background-color: $input-bg-color;
+        overflow-x: hidden;
+
+        // height: calc(100vh - 65px);
+        // overflow-y: scroll;
+    }
+
+    &__menu-item {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        padding: 10px 16px;
+        height: 40px;
+        cursor: pointer;
+    }
+
     @media screen and (max-width: $bp-desktop-sm) {
         position: absolute;
         left: 56px;

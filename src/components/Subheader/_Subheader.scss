@@ -7,6 +7,8 @@
     top: 0;
     background-color: $default-bg-color;
 
+    z-index: 10;
+
     &__task {
         display: flex;
         column-gap: 16px;
