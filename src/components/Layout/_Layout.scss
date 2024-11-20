@@ -7,13 +7,14 @@
 
     &__aside-and-main-wrapper {
         display: flex;
+        overflow-x: hidden;
     }
 
     & main {
         display: flex;
+        overflow-x: hidden;
         flex-direction: column;
         width: 100%;
-        row-gap: 16px;
     }
 
     @media screen and (max-width: $bp-tablet-sm) {

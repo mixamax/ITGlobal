@@ -1,7 +1,5 @@
 @import "fonts", "variables", "normalize", "mixins", "globals";
 
-// @import "../components/Input/Input";
-
 @import "../components/Layout/Layout";
 @import "../components/Button/Button";
 @import "../components/SidebarBtn/SidebarBtn";
@@ -10,6 +8,10 @@
 @import "../components/Navigator/Navigator";
 @import "../components/Header/Header";
 @import "../components/Subheader/Subheader";
+@import "../components/Content/Content";
+@import "../components/Form/Form";
+@import "../components/FormItem/FormItem";
+@import "../components/Badge/Badge";
 
 // @use "fonts" as;
 // @use "variables" as

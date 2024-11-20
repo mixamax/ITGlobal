@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import { Button } from "../Button/Button";
 
-export function Subheader() {
+export const Subheader = forwardRef<HTMLDivElement>((props, ref) => {
     return (
-        <div className="subheader">
+        <div className="subheader" ref={ref}>
             <div className="subheader__task">
                 <span className="subheader__task-title">Подзадача</span>
                 <Button type="text" text="Создать" isBordered />
@@ -13,4 +14,4 @@ export function Subheader() {
             </div>
         </div>
     );
-}
+});

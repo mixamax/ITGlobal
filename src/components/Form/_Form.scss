@@ -1,0 +1,8 @@
+$form-gap: 16px;
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $form-gap $form-gap;
+}

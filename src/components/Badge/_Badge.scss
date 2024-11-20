@@ -1,0 +1,25 @@
+.badge {
+    overflow: hidden;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    background-color: $badge-bg-color;
+    border: 1px solid $badge-border-color;
+    border-radius: 4px;
+
+    & span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    & button {
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        line-height: 16px;
+    }
+}
