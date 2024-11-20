@@ -4,6 +4,7 @@
     line-height: 0;
     font-weight: 600;
     border-radius: 4px;
+    color: $default-color;
     background: none;
     cursor: pointer;
 }
@@ -16,6 +17,7 @@
 .button__text {
     padding: 6px 12px;
     line-height: 20px;
+    letter-spacing: 0.3px;
 }
 
 .button__primary {

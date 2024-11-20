@@ -2,6 +2,7 @@ import { Sidebar } from "../Sidebar/Sidebar";
 import { useResize } from "../../hooks/useResize";
 import { useEffect, useState } from "react";
 import { Header } from "../Header/Header";
+import { Subheader } from "../Subheader/Subheader";
 
 export function Layout() {
     const { isMenuVisibleInit } = useResize();
@@ -29,7 +30,9 @@ export function Layout() {
                     onChangeMenuVisibility={handleChangeMenuVisibility}
                 />
 
-                <main></main>
+                <main>
+                    <Subheader />
+                </main>
             </div>
         </div>
     );

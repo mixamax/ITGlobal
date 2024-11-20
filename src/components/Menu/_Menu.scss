@@ -13,6 +13,7 @@ $menu-width: 280px;
         display: flex;
         justify-content: space-between;
         column-gap: 8px;
+        border-bottom: $border;
     }
 
     &_hidden {

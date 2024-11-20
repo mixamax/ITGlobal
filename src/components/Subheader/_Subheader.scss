@@ -1,0 +1,33 @@
+.subheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+
+    &__task {
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+    }
+
+    &__save-buttons {
+        display: flex;
+        column-gap: 4px;
+        align-items: center;
+    }
+
+    &__task-title {
+        font-family: $title-font;
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: $bp-tablet-sm) {
+        &__save-buttons {
+            display: none;
+        }
+        &__task {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}

@@ -5,13 +5,15 @@
     display: grid;
     grid-template-rows: 48px 1fr;
 
-    &__layout__aside-and-main-wrapper {
+    &__aside-and-main-wrapper {
         display: flex;
     }
 
     & main {
-        background-color: blue;
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        row-gap: 16px;
     }
 
     @media screen and (max-width: $bp-tablet-sm) {
