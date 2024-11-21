@@ -1,4 +1,5 @@
 import { SidebarBtn } from "../SidebarBtn/SidebarBtn";
+import starPath from "../../assets/images/star.svg";
 
 type Props = {
     onChangeMenuVisibility: () => void;
@@ -13,6 +14,9 @@ export function Navigator({ onChangeMenuVisibility, isMenuVisible }: Props) {
                 onChangeMenuVisibility={onChangeMenuVisibility}
                 isMenuVisible={isMenuVisible}
             />
+            <div className="navigator__item">
+                <img width={24} height={24} src={starPath} alt="звездочка" />
+            </div>
         </div>
     );
 }

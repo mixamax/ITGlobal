@@ -5,4 +5,13 @@
     height: 100%;
     border-right: $border;
     background-color: $default-bg-color;
+
+    &__item {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
 }
