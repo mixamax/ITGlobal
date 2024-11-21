@@ -67,9 +67,7 @@ export function Layout() {
                     </main>
                 </div>
             </div>
-            {isModalVisible && (
-                <Modal isVisible={isModalVisible} onClose={handleCloseModal} />
-            )}
+            {isModalVisible && <Modal onClose={handleCloseModal} />}
         </>
     );
 }
