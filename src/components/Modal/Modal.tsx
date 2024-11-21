@@ -1,6 +1,7 @@
 import { Button } from "../Button/Button";
 import Form from "../Form/Form";
 import btnIcon from "../../assets/images/big-close.svg";
+import { useEffect } from "react";
 
 type Props = {
     onClose: () => void;
@@ -12,6 +13,18 @@ export function Modal({ onClose }: Props) {
             onClose();
         }
     };
+    const closeModalByEsc = (e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+            onClose();
+        }
+    };
+    useEffect(() => {
+        document.addEventListener("keydown", closeModalByEsc);
+
+        return () => {
+            document.removeEventListener("keydown", closeModalByEsc);
+        };
+    }, []);
 
     return (
         <div className="modal" onClick={handleCloseModal}>
