@@ -9,28 +9,32 @@
     cursor: pointer;
 }
 
-.button__smallIcon,
-.button__largeIcon {
+.button_wide {
+    width: 100%;
+}
+
+.button_smallIcon,
+.button_largeIcon {
     padding: 6px;
 }
 
-.button__largeIcon {
+.button_largeIcon {
     height: 32px;
 }
 
-.button__text {
+.button_text {
     padding: 6px 12px;
     line-height: 20px;
     letter-spacing: 0.3px;
 }
 
-.button__primary {
+.button_primary {
     padding: 6px 12px;
     line-height: 20px;
     background-color: $button-primery-bg-color;
     color: $inverse-color;
 }
 
-.button__bordered {
+.button_bordered {
     @include default-border;
 }

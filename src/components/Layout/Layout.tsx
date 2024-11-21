@@ -4,18 +4,22 @@ import { useEffect, useRef, useState } from "react";
 import { Header } from "../Header/Header";
 import { Subheader } from "../Subheader/Subheader";
 import { Content } from "../Content/Content";
+import { Modal } from "../Modal/Modal";
 
 export function Layout() {
     const { isMenuVisibleInit } = useResize();
     const mainRef = useRef<HTMLElement>(null);
     const subheaderRef = useRef<HTMLDivElement>(null);
-    // const layoutRef = useRef<HTMLDivElement>(null);
 
     const [isMenuVisible, setIsMenuVisible] = useState(() => isMenuVisibleInit);
+    const [isModalVisible, setIsModalVisible] = useState(false);
 
     const handleChangeMenuVisibility = () => {
         setIsMenuVisible((s) => !s);
     };
+
+    const handleCloseModal = () => setIsModalVisible(false);
+    const handleOpenModal = () => setIsModalVisible(true);
 
     useEffect(() => {
         setIsMenuVisible(isMenuVisibleInit);
@@ -41,34 +45,31 @@ export function Layout() {
         };
     }, []);
 
-    // useLayoutEffect(() => {
-    //     const element = mainRef.current;
-    //     const layout = layoutRef.current;
-    //     if (element && layout) {
-    //         const rect = element.getBoundingClientRect();
-    //         const mainHeight = rect.height;
-
-    //         layout.style.height = `${mainHeight}px`;
-    //     }
-    // }, []);
-
     return (
-        <div className="layout">
-            <Header
-                onChangeMenuVisibility={handleChangeMenuVisibility}
-                isMenuVisible={isMenuVisible}
-            />
-            <div className="layout__aside-and-main-wrapper">
-                <Sidebar
-                    isMenuVisible={isMenuVisible}
+        <>
+            <div className={"layout" + (isModalVisible ? " layout_fixed" : "")}>
+                <Header
                     onChangeMenuVisibility={handleChangeMenuVisibility}
+                    isMenuVisible={isMenuVisible}
                 />
+                <div className="layout__aside-and-main-wrapper">
+                    <Sidebar
+                        isMenuVisible={isMenuVisible}
+                        onChangeMenuVisibility={handleChangeMenuVisibility}
+                    />
 
-                <main ref={mainRef}>
-                    <Subheader ref={subheaderRef} />
-                    <Content />
-                </main>
+                    <main ref={mainRef}>
+                        <Subheader
+                            ref={subheaderRef}
+                            openModal={handleOpenModal}
+                        />
+                        <Content />
+                    </main>
+                </div>
             </div>
-        </div>
+            {isModalVisible && (
+                <Modal isVisible={isModalVisible} onClose={handleCloseModal} />
+            )}
+        </>
     );
 }

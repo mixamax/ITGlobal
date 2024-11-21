@@ -25,9 +25,6 @@ $menu-width: 280px;
         flex-direction: column;
         background-color: $input-bg-color;
         overflow-x: hidden;
-
-        // height: calc(100vh - 65px);
-        // overflow-y: scroll;
     }
 
     &__menu-item {

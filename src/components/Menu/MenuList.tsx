@@ -22,7 +22,7 @@ export function MenuList() {
     return (
         <div className="menu__menu-list">
             {data.map((item) => (
-                <div className="menu__menu-item">
+                <div className="menu__menu-item" key={item}>
                     <img height={10} src={imagePath} alt="иконка стрелки" />
                     {item}
                 </div>

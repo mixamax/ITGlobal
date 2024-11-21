@@ -1,5 +1,6 @@
 type Props = {
     type: "text" | "primary" | "smallIcon" | "largeIcon";
+    wide?: boolean;
     isBordered?: boolean;
     imgSrc?: string;
     alt?: string;
@@ -9,6 +10,7 @@ type Props = {
 
 export function Button({
     type,
+    wide,
     isBordered,
     imgSrc,
     text,
@@ -21,9 +23,9 @@ export function Button({
     }
     return (
         <button
-            className={`button button__${type} ${
-                isBordered && "button__bordered"
-            }`}
+            className={`button button_${type} ${
+                isBordered && "button_bordered"
+            } ${wide && "button_wide"}`}
             onClick={onClick}
         >
             {imgSrc && (

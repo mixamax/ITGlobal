@@ -14,7 +14,6 @@ type Props = {
     searchBtn?: boolean;
     addBtn?: boolean;
     calendarBtn?: boolean;
-    // closeBtn?: boolean;
 };
 
 export default function FormItem({
@@ -25,7 +24,6 @@ export default function FormItem({
     searchBtn,
     addBtn,
     calendarBtn,
-    // closeBtn,
     children,
 }: Props) {
     return (
@@ -40,7 +38,11 @@ export default function FormItem({
             </span>
 
             <div className="form-item__content-wrapper">
-                <div className="form-item__content" contentEditable={edit}>
+                <div
+                    className="form-item__content"
+                    contentEditable={edit}
+                    suppressContentEditableWarning={true}
+                >
                     {children}
                     {!edit && (
                         <div className="form-item__close">

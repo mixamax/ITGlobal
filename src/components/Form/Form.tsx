@@ -11,7 +11,7 @@ const mapData = data.map((item) => (
         searchBtn={item.searchBtn ? true : false}
         addBtn={item.addBtn ? true : false}
         calendarBtn={item.calendarBtn ? true : false}
-        key={item.title}
+        key={item.id}
     >
         {typeof item.childrenItems === "string"
             ? item.childrenItems

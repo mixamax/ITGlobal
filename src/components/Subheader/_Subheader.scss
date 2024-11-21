@@ -31,6 +31,12 @@
     }
 
     @media screen and (max-width: $bp-tablet-sm) {
+        // убираем shadow при скролле, открепляем шапку
+        position: static;
+        &_scroll {
+            box-shadow: none;
+        }
+
         &__save-buttons {
             display: none;
         }
